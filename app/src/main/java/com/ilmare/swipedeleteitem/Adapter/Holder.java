@@ -7,12 +7,16 @@ import android.widget.TextView;
 import com.ilmare.swipedeleteitem.R;
 import com.ilmare.swipedeleteitem.View.MySwipeLayout;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Holder {
     private TextView tvCall;
     private TextView tvDel;
     private ImageView ivIcon;
     private TextView tvName;
     private MySwipeLayout rootView;
+    private List<MySwipeLayout> list=new ArrayList<>();
 
     public Holder(MySwipeLayout view) {
         tvCall = (TextView) view.findViewById(R.id.tv_call);
@@ -20,27 +24,15 @@ public class Holder {
         ivIcon = (ImageView) view.findViewById(R.id.iv_icon);
         tvName = (TextView) view.findViewById(R.id.tv_name);
         this.rootView=view;
-        view.setOnSwipeLayoutListener(new MySwipeLayout.OnSwipeLayoutListener() {
-            @Override
-            public void onClose(MySwipeLayout mSwipeLayout) {
-                Log.d("Holder", "onClose");
-            }
 
-            @Override
-            public void onOpen(MySwipeLayout mSwipeLayout) {
-                Log.d("Holder", "onOpen");
-            }
+    }
 
-            @Override
-            public void onStartClose(MySwipeLayout mSwipeLayout) {
-                Log.d("Holder", "onStartClose");
-            }
+    public MySwipeLayout getRootView() {
+        return rootView;
+    }
 
-            @Override
-            public void onStartOpen(MySwipeLayout mSwipeLayout) {
-                Log.d("Holder", "onStartOpen");
-            }
-        });
+    public void setRootView(MySwipeLayout rootView) {
+        this.rootView = rootView;
     }
 
     public ImageView getIvIcon() {
