@@ -1,0 +1,2 @@
+# SwipeDeleteItem
+![](Images/swipeDeleteItem.gif)
