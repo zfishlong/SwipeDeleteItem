@@ -16,15 +16,24 @@ public class Holder {
     private ImageView ivIcon;
     private TextView tvName;
     private MySwipeLayout rootView;
-    private List<MySwipeLayout> list=new ArrayList<>();
+    private TextView point;
 
     public Holder(MySwipeLayout view) {
         tvCall = (TextView) view.findViewById(R.id.tv_call);
         tvDel = (TextView) view.findViewById(R.id.tv_del);
         ivIcon = (ImageView) view.findViewById(R.id.iv_icon);
         tvName = (TextView) view.findViewById(R.id.tv_name);
+        point = (TextView) view.findViewById(R.id.point);
         this.rootView=view;
 
+    }
+
+    public TextView getPoint() {
+        return point;
+    }
+
+    public void setPoint(TextView point) {
+        this.point = point;
     }
 
     public MySwipeLayout getRootView() {

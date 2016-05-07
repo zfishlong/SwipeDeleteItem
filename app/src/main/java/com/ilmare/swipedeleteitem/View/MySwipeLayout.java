@@ -11,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.security.PrivateKey;
@@ -26,7 +27,7 @@ public class MySwipeLayout extends FrameLayout {
 
 
     private LinearLayout mBackView;
-    private LinearLayout mFrontView;
+    private RelativeLayout mFrontView;
 
     private int mWidth; //前面宽度
     private int mRange; //后面宽度
@@ -240,7 +241,7 @@ public class MySwipeLayout extends FrameLayout {
 
         // 当xml被填充完毕时调用
         mBackView = (LinearLayout) getChildAt(0);
-        mFrontView = (LinearLayout) getChildAt(1);
+        mFrontView = (RelativeLayout) getChildAt(1);
 
     }
 
