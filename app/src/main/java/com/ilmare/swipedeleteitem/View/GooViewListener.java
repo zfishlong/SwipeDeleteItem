@@ -78,7 +78,8 @@ public class GooViewListener implements OnTouchListener, GooView.OnDisappearList
 	public void onDisappear(PointF mDragCenter) {
 		if (mWm != null && mGooView.getParent() != null) {
 			mWm.removeView(mGooView);
-			
+
+
 			//播放气泡爆炸动画
 			ImageView imageView = new ImageView(mContext);
 			imageView.setImageResource(R.drawable.anim_bubble_pop);
